@@ -1,0 +1,1 @@
+'、"、and、exec、insert、select、delete、update、count、*、%、chr、mid、master、truncate、char、declare、union、#、--、
