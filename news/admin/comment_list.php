@@ -53,7 +53,8 @@ $all_comment_array = $common_function_object->get_all_comment();
               {
                   $modify_datetime = $all_comment_array_val['modify_datetime'];
               }
-              else{
+              else
+              {
                   $modify_datetime = '未編輯過';
               }
               ?>
