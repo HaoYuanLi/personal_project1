@@ -43,7 +43,6 @@ class Common_function extends Db_connect {
         $query = $this->dbh->prepare($sql);
         $query->bindValue(':start', $start, PDO::PARAM_INT);
         $query->bindValue(':per', $this->per, PDO::PARAM_INT);
-        $start = 2;
         $query->execute();
         if ($query->rowCount() > 0)
         {
