@@ -28,7 +28,7 @@ class Common_function extends Db_connect {
         $query->execute();
         $this->data_nums = $query->fetchColumn(); //取得資料總比數
         $this->pages = ceil($this->data_nums / $this->per); //計算總頁數
-        if ( ! isset($_GET['page']))
+        if (!isset($_GET['page']))
         {
             $page = 1;
         }
@@ -65,7 +65,7 @@ class Common_function extends Db_connect {
         $query->execute();
         $this->data_nums = $query->fetchColumn(); //取得資料總比數
         $this->pages = ceil($this->data_nums / $this->per); //計算總頁數
-        if ( ! isset($_GET['page']))
+        if (!isset($_GET['page']))
         {
             $page = 1;
         }
