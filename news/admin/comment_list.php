@@ -48,17 +48,7 @@ $all_comment_array = $common_function_object->get_all_comment();
               </td>
               <?php endif; ?>
               <td scope="row"><?php echo $all_comment_array_val['create_datetime']; ?></td>
-              <?php
-              if ($all_comment_array_val['modify_datetime'] !== NULL)
-              {
-                  $modify_datetime = $all_comment_array_val['modify_datetime'];
-              }
-              else
-              {
-                  $modify_datetime = '未編輯過';
-              }
-              ?>
-              <td scope="row"><?php echo $modify_datetime; ?></td>
+              <td scope="row"><?php echo $all_comment_array_val['modify_datetime']; ?></td>
               <td scope="row"><a href="javascript:void(0)" class="btn btn-danger del_comment" data-id=<?php echo $all_comment_array_val['id']; ?>>刪除</a></td>
             </tr>
           </tbody>
