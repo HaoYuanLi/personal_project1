@@ -587,10 +587,13 @@ class Common_function extends Db_connect {
         $sql = "SELECT `id`,
                        `content`,
                        `create_datetime`,
-                       `modify_datetime`,
                        (SELECT `nickname` FROM `user` WHERE `id` = `create_user_id`) AS create_user_nickname,
                        `article_id`,
                        `work_id`,
+                CASE
+                    WHEN `modify_datetime` IS NOT NULL THEN `modify_datetime`
+                    ELSE '未編輯過'
+                END AS modify_datetime,
                 CASE
                     WHEN `article_id` IS NOT NULL THEN (SELECT `title` FROM `article` WHERE `id` = `article_id`)
                     ELSE NULL
