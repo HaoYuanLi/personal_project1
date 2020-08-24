@@ -27,7 +27,7 @@
           </div>
           <p style="font-weight:bold;">檔案上傳(一次只能上傳一種)</p>
           <div class="form-group">
-            <label for="video">影片上傳(點擊上傳後,需等片刻)</label><br>
+            <label for="video">影片上傳(檔案若超過41MB會導致上傳失敗)</label><br>
             <input type="file" id="video" accept="video/*">
             <input type="hidden" id="video_path">
             <a style="margin-bottom:5px;" href="javascript:void(0);" class="btn btn-danger del_video">影片刪除</a>
