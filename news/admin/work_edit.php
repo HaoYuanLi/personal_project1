@@ -32,7 +32,7 @@ $single_work_array = $common_function_object->get_designated_work($_GET['work_id
           </div>
           <p style="font-weight:bold;">檔案上傳(一次只能上傳一種)</p>
           <div class="form-group">
-            <label for="video">影片上傳(點擊上傳後,需等片刻)</label><br>
+            <label for="video">影片上傳(檔案若超過41MB會導致上傳失敗)</label><br>
             <input type="file" id="video" accept="video/*" <?php echo ($single_work_array['video_path'] !== NULL && file_exists('../'.$single_work_array['video_path']) OR $single_work_array['youtube_link'] !== NULL) ? 'disabled' : ''; ?>>
             <input type="hidden" id="video_path" value="<?php echo ($single_work_array['video_path'] !== NULL && file_exists('../'.$single_work_array['video_path'])) ? $single_work_array['video_path'] : ''; ?>">
             <a style="margin-bottom:5px;" href="javascript:void(0);" class="btn btn-danger del_video">影片刪除</a>
